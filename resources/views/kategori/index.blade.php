@@ -29,8 +29,20 @@
                 <th scope="row">{{$key+1}}</th>
                 <td>{{$item -> name}}</td>
                 <td>{{$item -> slug}}</td>
-                <td>@mdo</td>
+                <td></td>
+                <td>
+                    <form action="{{ route('kategori.destroy', $item->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+
+                        <a href="{{ route('kategori.update', $item->id) }}" class=" btn btn-link text-info"><i
+                                class="fas fa-edit"></i></a>
+                        <button class="btn btn-link text-danger"
+                            onclick="return confirm('Yakin ingin menghapus data?')"><i
+                                class="fas fa-trash"></i></button>
+                    </form>
               </tr>
+
               @endforeach ()
             </tbody>
           </table>

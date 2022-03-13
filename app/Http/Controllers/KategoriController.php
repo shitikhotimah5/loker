@@ -75,7 +75,8 @@ class KategoriController extends Controller
      */
     public function edit(Kategori $kategori)
     {
-        //
+        //mengedit kategori
+        return view ('kategori.edit', compact('kategori'));
     }
 
     /**
@@ -87,7 +88,21 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
-        //
+        //untuk update kategori
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $data = $request->only('name'); // Hanya name yang diinputkan
+        $data['slug'] = Str::slug($request->name);
+
+        $kategori->update($data);
+
+        return redirect()->route('kategori.index')->with([
+                'message' => 'Kategori Berhasil Diperbaharui',
+                'success' => true,
+
+            ]);
     }
 
     /**
@@ -98,6 +113,12 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
-        //
+        //eksekusi delete back to index
+        $kategori->delete();
+
+        return redirect()->route('kategori.index')->with([
+            'message' => 'kategori Berhasil Dihapus',
+            'success' => true,
+        ]);
     }
 }
