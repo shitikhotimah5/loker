@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::group([
+    'middleware' => ['auth', 'role:admin,user'],
+], function() {
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    route::group([
+        'middleware' => 'role:admin'
+    ], function () {
+
+        Route::resource('/kategori', KategoriController::class);
+    });
+
+    Route::group([
+        'middleware' => 'role:user'
+    ], function () {
+        //
+    });
+});
+
