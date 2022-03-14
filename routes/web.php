@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\LokerController;
+use App\Http\Controllers\PelamarController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 
@@ -29,6 +32,9 @@ Route::group([
     ], function () {
 
         Route::resource('/kategori', KategoriController::class);
+        Route::resource('/loker', LokerController::class);
+        Route::resource('/pelamar', PelamarController::class);
+
     });
 
     Route::group([

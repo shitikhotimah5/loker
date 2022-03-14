@@ -42,6 +42,26 @@
                     </p>
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a href="{{route('loker.index')}}"
+                    class="nav-link {{request()->is ('loker*') ? 'active' : ''}}">
+                    <i class="nav-icon fas fa-cube"></i>
+                    <p>
+                        Loker
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('pelamar.index')}}"
+                    class="nav-link {{request()->is ('pelamar*') ? 'active' : ''}}">
+                    <i class="nav-icon fas fa-cube"></i>
+                    <p>
+                        Pelamar
+                    </p>
+                </a>
+            </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

@@ -73,8 +73,9 @@ class KategoriController extends Controller
      * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategori $kategori)
+    public function edit($id)
     {
+        $kategori = Kategori::find($id);
         //mengedit kategori
         return view ('kategori.edit', compact('kategori'));
     }
@@ -88,9 +89,10 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
-        //untuk update kategori
+        // dd($request->all());
+        // //untuk update kategori
         $this->validate($request, [
-            'name' => 'required'
+            'name' => 'required|unique:kategori,name,'.$kategori->id
         ]);
 
         $data = $request->only('name'); // Hanya name yang diinputkan
