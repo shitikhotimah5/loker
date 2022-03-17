@@ -29,9 +29,9 @@
 
             <div class="form-group">
                 <label for="name">Pendidikan</label>
-                <input type="text" class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan" name="pendidikan" value="{{ old('pendidikan') ?? $loker->name}}" required autocomplete="off">
+                <input type="text" class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan" name="pendidikan" value="{{ old('pendidikan') ?? $loker->pendidikan}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('pendidikan')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
@@ -39,9 +39,9 @@
 
             <div class="form-group">
                 <label for="name">Deskripsi</label>
-                <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" value="{{ old('deskripsi') ?? $loker->name}}" required autocomplete="off">
+                <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" value="{{ old('deskripsi') ?? $loker->deskripsi}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('deskripsi')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
@@ -49,9 +49,9 @@
 
             <div class="form-group">
                 <label for="name">Syarat</label>
-                <input type="text" class="form-control @error('syarat') is-invalid @enderror" id="syarat" name="syarat" value="{{ old('syarat') ?? $loker->name}}" required autocomplete="off">
+                <input type="text" class="form-control @error('syarat') is-invalid @enderror" id="syarat" name="syarat" value="{{ old('syarat') ?? $loker->syarat}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('syarat')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
@@ -59,9 +59,9 @@
 
             <div class="form-group">
                 <label for="name">Tanggal Mulai</label>
-                <input type="date" class="form-control @error('start_date') is-invalid @enderror" id="start_date" name="start_date" value="{{ old('start_date') ?? $loker->name}}" required autocomplete="off">
+                <input type="date" class="form-control @error('start_date') is-invalid @enderror" id="start_date" name="start_date" value="{{ old('start_date') ?? $loker->start_date}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('start_date')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
@@ -69,9 +69,9 @@
 
             <div class="form-group">
                 <label for="name">Tanggal Selesai</label>
-                <input type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date') ?? $loker->name}}" required autocomplete="off">
+                <input type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date') ?? $loker->end_date}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('end_date')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 

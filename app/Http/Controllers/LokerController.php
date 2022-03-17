@@ -131,6 +131,7 @@ class LokerController extends Controller
      */
     public function destroy(Loker $loker)
     {
+        // $user =
          //eksekusi delete back to index
          $loker->delete();
 

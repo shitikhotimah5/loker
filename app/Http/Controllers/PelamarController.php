@@ -102,7 +102,36 @@ class PelamarController extends Controller
      */
     public function update(Request $request, Pelamar $pelamar)
     {
-        //
+        //untuk update loker
+        $this->validate($request, [
+            'name' => 'required',
+            'tempat_lahir' => 'required',
+            'tgl_lahir' => 'required',
+            'alamat' => 'required',
+            'pendidikan' => 'required',
+            'email' => 'required',
+            'no_hp' => 'required',
+            'file' => 'required',
+
+        ]);
+
+        // $loker = Loker::find($loker);
+        $pelamar -> name = $request -> name;
+        $pelamar -> tempat_lahir = $request -> tempat_lahir;
+        $pelamar -> tgl_lahir = $request -> tgl_lahir;
+        $pelamar -> alamat = $request -> alamat;
+        $pelamar -> pendidikan = $request -> pendidikan;
+        $pelamar -> email = $request -> email;
+        $pelamar -> no_hp = $request -> no_hp;
+        $pelamar -> file = $request -> file;
+
+        $pelamar -> update();
+
+        return redirect()->route('pelamar.index')->with([
+                'message' => 'Pelamar Berhasil Diperbaharui',
+                'success' => true,
+
+            ]);
     }
 
     /**

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Loker')
+@section('title', 'Edit pelamar')
 
 @section('breadcrumb')
 @parent
-<li class="breadcrumb-item active">Edit Loker</li>
+<li class="breadcrumb-item active">Edit pelamar</li>
 @endsection
 
 @section('content')
@@ -14,12 +14,12 @@
         <h5 class="card-title">@yield('title')</h5>
     </div>
     <div class="card-body">
-        <form action="{{route('loker.update', $loker->id) }}" method="POST">
+        <form action="{{route('pelamar.update', $pelamar->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">
-              <label for="name">Nama Loker</label>
-              <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') ?? $loker->name}}" required autocomplete="off">
+              <label for="name">Nama pelamar</label>
+              <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') ?? $pelamar->name}}" required autocomplete="off">
 
                 @error('name')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -28,52 +28,73 @@
             </div>
 
             <div class="form-group">
-                <label for="name">Pendidikan</label>
-                <input type="text" class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan" name="pendidikan" value="{{ old('pendidikan') ?? $loker->name}}" required autocomplete="off">
+                <label for="name">Tempat Lahir</label>
+                <input type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" id="tempat_lahir" name="tempat_lahir" value="{{ old('tempat_lahir') ?? $pelamar->tempat_lahir}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('tempat_lahir')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
             </div>
 
             <div class="form-group">
-                <label for="name">Deskripsi</label>
-                <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" value="{{ old('deskripsi') ?? $loker->name}}" required autocomplete="off">
+                <label for="name">Tanggal Lahir</label>
+                <input type="date" class="form-control @error('tgl_lahir') is-invalid @enderror" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir') ?? $pelamar->tgl_lahir}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('tgl_lahir')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
             </div>
 
             <div class="form-group">
-                <label for="name">Syarat</label>
-                <input type="text" class="form-control @error('syarat') is-invalid @enderror" id="syarat" name="syarat" value="{{ old('syarat') ?? $loker->name}}" required autocomplete="off">
+                <label for="name">Alamat</label>
+                <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ old('alamat') ?? $pelamar->alamat}}" required autocomplete="off">
 
-                  @error('name')
+                  @error('alamat')
                       <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
             </div>
 
             <div class="form-group">
-                <label for="name">Tanggal Mulai</label>
-                <input type="date" class="form-control @error('start_date') is-invalid @enderror" id="start_date" name="start_date" value="{{ old('start_date') ?? $loker->name}}" required autocomplete="off">
+                <label for="pendidikan">Pendidikan</label>
+                <input type="text" class="form-control @error('pendidikan') is-invalid @enderror" id="pendidikan" name="pendidikan" value="{{ old('pendidikan') ?? $pelamar->pendidikan}}" required autocomplete="off">
 
-                  @error('name')
-                      <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                @error('pendidikan')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') ?? $pelamar->email}}" required autocomplete="off">
+
+                @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
 
             </div>
 
             <div class="form-group">
-                <label for="name">Tanggal Selesai</label>
-                <input type="date" class="form-control @error('end_date') is-invalid @enderror" id="end_date" name="end_date" value="{{ old('end_date') ?? $loker->name}}" required autocomplete="off">
+                <label for="no_hp">No HP</label>
+                <input type="text" class="form-control @error('no_hp') is-invalid @enderror" id="no_hp" name="no_hp" value="{{ old('no_hp') ?? $pelamar->no_hp}}" required autocomplete="off">
 
-                  @error('name')
-                      <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                @error('no_hp')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
+            </div>
+
+            <div class="form-group">
+                <label for="file">File</label>
+                <input type="text" class="form-control @error('file') is-invalid @enderror" id="file" name="file" value="{{ old('file') ?? $pelamar->file}}" required autocomplete="off">
+
+                @error('file')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
 
             </div>
 
