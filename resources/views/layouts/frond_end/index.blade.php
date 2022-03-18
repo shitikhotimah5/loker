@@ -247,7 +247,7 @@
                 <div class="col-lg-7 office-info text-center">
                     <a href="" class=" ml-3 text-white text-decoration-none">
                         <i class="fas fa-phone-alt"></i>
-                        <span class="ml-1">087860429389</span>
+                        <span class="ml-1">0895704325019</span>
                     </a>
                     <a href="" class="ml-3 text-white text-decoration-none">
                         <i class="far fa-clock"></i>
@@ -255,13 +255,13 @@
                     </a>
                     <a href="" class="ml-3 text-white text-decoration-none">
                         <i class="fas fa-envelope"></i>
-                        <span class="ml-1">vikar@gmail.com</span>
+                        <span class="ml-1">shitikhotimah5@gmail.com</span>
                     </a>
                 </div>
-                <div class="col-lg-2 action" style="white-space: nowrap;">
+                {{-- <div class="col-lg-2 action" style="white-space: nowrap;">
                     <a href="" class="btn btn-sm btn-light py-0 rounded-0">Donasi</a>
                     <a href="" class="btn btn-sm btn-light py-0 rounded-0">Galang Dana</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -270,7 +270,7 @@
     <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-white border-bottom" style="top: -1px;">
         <div class="container">
             <a href="" class="navbar-brand">
-                <img src="{{ asset('/img/logo.png') }}" alt="">
+                <img src="{{ asset('/css/asset/logo.png') }}" height="40px" width="40px" alt="">
             </a>
             <button class="navbar-toggler first-load" type="button" data-toggle="collapse" data-target="#navbar1"
                 aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
@@ -309,28 +309,28 @@
             <div class="row">
                 <div class="col-lg-3 text-white-80">
                     <div class="footer logo mb-4">
-                        <img src="{{ asset('/img/logo2.png') }}" alt="" style="width: 170px">
+                        <img src="{{ asset('/css/asset/logo-p.png') }}" alt="" style="width: 170px">
                     </div>
                     <p>
-                        Jl. Kibandang Semarang <br>
-                        Semarang, Jawa Tengah
+                        Jl. Nasional Cirebon, Kanci Kulon <br>
+                        Kec.Astanajapura, Kab.Cirebon
                     </p>
                     <p class="mb-1"><i class="fas fa-phone-alt mr-2"></i>
-                        087860429389
+                        0895704325019
                     </p>
                     <p class="mb-1"><i class="fas fa-envelope mr-2"></i>
-                        vikar@gmail.com
+                        shitikhotimah5@gmail.com
                     </p>
                     <p class="mb-1"><i class="fas fa-globe mr-2"></i>
                         website.com
                     </p>
                 </div>
                 <div class="col-lg-3 text-white-80">
-                    <h5 class="mb-lg-4 mb-2">Mari Berbagi</h5>
-                    <p class="mb-lg-3 mb-1"><a href="" class="text-white-80 text-decoration-none">Galang Dana</a>
+                    <h5 class="mb-lg-4 mb-2">Informasi</h5>
+                    <p class="mb-lg-3 mb-1"><a href="" class="text-white-80 text-decoration-none">Lowongan</a>
                         <br> <small class="text-muted"></small>
                     </p>
-                    <p class="mb-lg-3 mb-1"><a href="" class="text-white-80 text-decoration-none">Donasi</a>
+                    <p class="mb-lg-3 mb-1"><a href="" class="text-white-80 text-decoration-none">Event</a>
                         <br> <small class="text-muted"></small>
                     </p>
                 </div>

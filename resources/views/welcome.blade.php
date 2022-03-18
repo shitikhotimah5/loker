@@ -4,13 +4,14 @@
 
 
 
+
 @push('css')
 <style>
     /* Jumbotron */
     .jumbotron {
         height: 87.5vh;
         /* background-image: url('{{ asset("/img/bgcharity1.jpg") }}'); */
-        /* background-image: url('/css/asset/logo1.png'); */
+        background-image: url('/css/asset/pltu.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 0;
@@ -32,17 +33,17 @@
             font-size: 24px;
         }
     }
-    /* Dana Tersalurkan */
-    .dana-tersalurkan.card {
+    /* informasi kerja */
+    .informasi-kerja.card {
         border: 0;
         box-shadow: 0 1rem 3rem rgb(0, 0, 0, .1) !important;
         transition: 1s;
     }
-    .dana-tersalurkan .card:hover,
-    .dana-tersalurkan .card:focus {
+    .informasi-kerja .card:hover,
+    .informasi-kerja .card:focus {
         transform: translateY(-5px);
     }
-    /* Galang Dana 2 */
+    /* Galang Dana 2
     @media (max-width: 575.98px) {
         .galang-dana2 .fa-3x {
             font-size: 32px;
@@ -50,7 +51,7 @@
         .galang-dana2 h3 {
             font-size: 18px;
         }
-    }
+    } */
 
 </style>
 @endpush
@@ -62,52 +63,52 @@
         <div class="card p-4 border text-center img-card">
             <h1 class="display-4 font-weight-bold">Cirebon Power</h1>
             <p class="lead text-capitalize mt-3">Bergabung Bersama Kami</p>
-            <a href="" class="btn btn-primary btn-lg rounded w-50 m-auto">Join</a>
+            <a href="{{route('register')}}" class="btn btn-primary btn-lg rounded w-50 m-auto">Join</a>
         </div>
     </div>
 </div>
 
 {{-- Info Campaign --}}
 <div class="info-campaign bg-dark">
-    <div class="container text-white py-5">
+    <div class="container text-white py-3">
         <div class="row text-center">
             <div class="col-lg-3 col-md-6">
                 <p class="icon">
                     <i class="fas fa-smile fa-2x"></i>
                 </p>
-                <p class="fa-2x font-weight-bold">4</p>
+                {{-- <p class="fa-2x font-weight-bold">4</p> --}}
                 <p class="fa-2x text mb-0 text-uppercase">Loker</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <p class="icon">
                     <i class="fas fa-rocket fa-2x"></i>
                 </p>
-                <p class="fa-2x font-weight-bold">4</p>
+                {{-- <p class="fa-2x font-weight-bold">4</p> --}}
                 <p class="fa-2x text mb-0 text-uppercase">Kategori</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <p class="icon">
                     <i class="fas fa-user-plus fa-2x"></i>
                 </p>
-                <p class="fa-2x font-weight-bold">4</p>
+                {{-- <p class="fa-2x font-weight-bold">4</p> --}}
                 <p class="fa-2x text mb-0 text-uppercase">Info</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <p class="icon">
                     <i class="fas fa-globe fa-2x"></i>
                 </p>
-                <p class="fa-2x font-weight-bold">4</p>
+                {{-- <p class="fa-2x font-weight-bold">4</p> --}}
                 <p class="fa-2x text mb-0 text-uppercase">About</p>
             </div>
         </div>
     </div>
 </div>
 {{-- Dana Tersalurkan --}}
-<div class="dana-tersalurkan">
+<div class="informasi-kerja">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="fa-3x mb-4">INFORMASI LOWONGAN</h2>
+                <h2 class="fa-3x mb-4">INFORMASI KERJA</h2>
                 <h3 class="font-weight-normal mb-3">
                     Jika Anda dapat bergabung dengan kami sekarang, <br>
                     maka semakin banyak yang terbantu
@@ -116,20 +117,22 @@
 
             @for ($i =0; $i < 6; $i++) <div class="col-lg-4 col-md-6">
                 <div class="card mt-4">
-                    <img src="/img/default.png" class="card-img-top" alt="...">
+                    {{-- <img src="/img/default.png" class="card-img-top" alt="..."> --}}
                     <div class="card-body p-2">
                         <div class="d-flex justify-content-between text-dark">
-                            <p class="mb-0">Terkumpul: <strong>1jt</strong></p>
-                            <p class="mb-0">Goal: <strong>10jt</strong></p>
+                            {{-- <p class="mb-0">Informasi Lowongan <strong>1jt</strong></p>
+                            <p class="mb-0">Goal: <strong>10jt</strong></p> --}}
+
+                            <p class="mb-0"><strong>Informasi Lowongan</strong></p>
                         </div>
                     </div>
                     <div class="card-body p-2 border-top">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Administrasi</h5>
                         <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit sapiente
                             unde rem id, impedit ab quaerat autem ea ipsa error!</p>
                     </div>
                     <div class="card-footer bg-light p-2">
-                        <a href="#" class="btn btn-primary d-block rounded"><i class="fas fa-donate mr-2"></i>Donasi
+                        <a href="#" class="btn btn-primary d-block rounded"></i>Daftar
                             Sekarang</a>
                     </div>
                 </div>
@@ -139,7 +142,7 @@
 </div>
 
 {{-- Galang Dana2 --}}
-<div class="galang-dana2 bg-white">
+{{-- <div class="galang-dana2 bg-white">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -152,5 +155,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
